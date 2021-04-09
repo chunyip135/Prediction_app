@@ -14,10 +14,9 @@ st.title("Loan Prediction")
 
 @st.cache
 def load_data():
-    train = pd.read_csv("train_file.csv")
-    test = pd.read_csv("test_file.csv")
-    full = train.append(test) 
-    return full
+    train = pd.read_csv("https://raw.githubusercontent.com/chunyip135/Prediction_app/main/train_file.csv")
+    return  train
 
 def train_model(df, random_state = 123):
     model = RandomForestClassifier(random_state = random_state)
+    
